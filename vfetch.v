@@ -33,7 +33,6 @@ fn uptime() string {
 	days := secs / 86400
 	mut res := ""
 	if days > 0 {
-		// 注意这里：强制加上大括号 ${days}，治好 0.5.1 的插值瞎眼病
 		res += "${days} days, "
 	}
 	res += "${(secs % 86400) / 3600} hours, ${(secs % 3600) / 60} mins"
